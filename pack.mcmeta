@@ -1,0 +1,13 @@
+{
+   "pack": {
+      "pack_format": 15,
+      "description": "Fullbright this is true with better GUI(Dark)",
+      "supported_formats": [
+         26,
+         41,
+         48,
+         57,
+         58
+      ]
+   }
+}
