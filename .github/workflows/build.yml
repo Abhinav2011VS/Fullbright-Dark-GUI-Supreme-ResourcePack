@@ -1,0 +1,31 @@
+name: Build and Upload Zip
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up zip tool
+      run: sudo apt-get install zip
+
+    - name: Create zip file
+      run: |
+        mkdir -p output
+        zip -r output/Fullbright-Dark-GUI-Supreme.zip assets pack.mcmeta pack.png
+
+    - name: Upload zip as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Fullbright-Dark-GUI-Supreme-zip
+        path: output/Fullbright-Dark-GUI-Supreme.zip
