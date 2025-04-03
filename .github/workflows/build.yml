@@ -25,7 +25,7 @@ jobs:
         zip -r output/Fullbright-Dark-GUI-Supreme.zip assets pack.mcmeta pack.png
 
     - name: Upload zip as artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Fullbright-Dark-GUI-Supreme-zip
         path: output/Fullbright-Dark-GUI-Supreme.zip
